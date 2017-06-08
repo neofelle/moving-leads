@@ -342,9 +342,9 @@ img.custom-logo {
     height: 100px;
 }
 .owl-dots{
-    display: none;
+    display: block;
     position: relative;
-    bottom: 70px;
+    bottom: 60px;
 }
 .owl-content{
     padding-top: 140px;
@@ -569,6 +569,10 @@ img.cover-service{
     color:white !important;
 }
 /* Testimonial CSS */
+.testimonial-container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 .testimonial > h2{
     margin: 0px;
     padding-top: 8px;
@@ -623,26 +627,48 @@ img.cover-service{
     width: 294px;
     height: 45px;
 }
-
+.footer-a{
+    height: 615px;
+}
 /* Page */
+.page > li{
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-family: 'lato-regular';  
+}
 .page-content{
-  padding: 40px !important;
+  padding-top: 40px !important;
+  padding-bottom: 0px !important;  
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 .page-title{
   color:black;
-  text-align: left;
   font-weight: 600;
   font-size: 40px;
   margin-bottom: 15px;
   line-height: 40px;
 }
-.page-content > p {
-    font-size: 18px;
-    line-height: 28px;
-    margin-bottom: 20px;
+.content-page{
+  padding-top:70px;
+  padding-bottom: 70px;
 }
-.page-content > ul{
-    margin-left: 35px;
+.page-content > p,.page > p {
+    font-size: 22px;
+    line-height: 28px;
+    font-family: 'lato-regular';
+    margin-bottom: 5px;
+}
+.inner-box{
+    background-color: #e4e4e4;
+    height: 500px;  
+    width: 100%;
+}
+.page-content > h2, .page > h2{
+  font-family: 'lato-regular';
+  font-size: 33px;
+  font-weight: 600;
+  line-height: 45px;
 }
 /* Inner page form layout */
 .input-form-text {
@@ -664,17 +690,18 @@ img.cover-service{
 }
 
 .submit-button {
-    background-color: #333333;
-    border: 1px solid white;
+    background-color: #006cba;
     font-size: 20px;
+    font-family: 'lato-regular';
     letter-spacing: 1px;
     color: white;
-    padding-left: 35px;
-    padding-right: 34px;
+    padding-left: 65px;
+    padding-right: 65px;
     padding-top: 15px;
     padding-bottom: 15px;
-    border-radius: 25px;
-    font-weight: bold;
+    border-radius: 5px;
+    font-weight: 600;
+    border: 0px;
 }
 .form{
     padding:20px;
@@ -686,7 +713,7 @@ img.cover-service{
 }
 section.page-section {
     position: relative;
-    bottom: 15px;
+    bottom: 0px;
 }
 /* Screen Layout CSS */
 @media (max-width: 2560px) {
@@ -734,17 +761,40 @@ section.page-section {
       margin: 0px;
   } 
 }
-@media (max-width: 1120px) {
-
+@media (max-width: 1040px) {
+   .col-img-2{
+    width: 18%;
+    padding: 7px;
+    position: relative;
+    right: 20px;
+  }
 }
 
 @media (max-width: 991px) {
-    .col-img-2{
-        width: 18%;
-        padding: 5px;
-        position: relative;
-        right:0px;
+      .footer-a{
+        height: 100%;
     }
+    .col-img-2 {
+        width: 12%;
+        padding: 20px;
+        position: relative;
+        right: 0px;
+    }
+    .submit-button {
+        background-color: #006cba;
+        font-size: 19px;
+        font-family: 'lato-regular';
+        letter-spacing: 1px;
+        color: white;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 5px;
+        font-weight: 600;
+        border: 0px;
+    }
+
     .service-area {
         padding-top: 0px !important;
     }
@@ -845,10 +895,6 @@ section.page-section {
         margin-bottom: 4px !important;
 
     }
-    .col-img-4 {
-        width: 20%;
-        max-width: 50px;
-    }
     .footer-logo > a {
         display: flex;
     }
@@ -856,9 +902,32 @@ section.page-section {
         width: 100%;
         height: 100%;
         margin: 0 auto;
+    } 
+
+    .page > .col-md-6{
+      width: 50% !important;
+      height: 250px !important;
+    }
+    .inner-box{
+        background-color: #e4e4e4 !important;
+        height: 250px !important;  
+        width: 100% !important;
     }
 }
 @media (max-width: 800px) {
+    .page-content > h2, .page > h2 {
+        font-family: 'lato-regular';
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 35px;
+    }
+    .page > .col-md-6 {
+        width: 100% !important;   
+        margin-bottom: 50px !important;
+    }
+    ul.page{
+          list-style-position: outside !important;
+    }
     .banner > h1 {
         margin-bottom: 0px;
         font-size: 27px;
@@ -942,6 +1011,7 @@ section.page-section {
       padding-left: 45px;
       border-radius: 38px;
   }
+
 }
 /* Tablet Layout */
 @media (max-width: 1000px) {
@@ -1005,6 +1075,12 @@ section.page-section {
     }
 }
 @media (max-width: 625px){
+  .col-img-2{
+    width: 14%;
+    padding: 9px;
+    position: relative;
+    right:0px;
+  }
     .footer-services-ul {
       padding: 0px;
       width: 95% !important;
@@ -1039,6 +1115,11 @@ section.page-section {
     }
 }
 @media (max-width: 575px) {
+  .inner-box{
+      background-color: #e4e4e4 !important;
+      height: 100% !important;  
+      width: 100% !important;
+  }
   .owl-content {
       padding-top: 100px;
       padding-right: 20px;
@@ -1059,9 +1140,6 @@ section.page-section {
       padding-bottom: 10px;
       padding-right: 35px;
       padding-left: 35px;
-  }
-  .page-content{
-    padding: 20px !important;
   }
   .page-title{
     font-size: 30px;
@@ -1085,6 +1163,12 @@ section.page-section {
 
   .item.slider-bg {
       height: 355px !important;
+  }
+  .col-img-2{
+    width: 18%;
+    padding: 5px;
+    position: relative;
+    right:0px;
   }
 
 }
@@ -1358,4 +1442,24 @@ section.page-section {
         width: 95%;
     }
 
+}
+@media (max-width: 310px){
+  .owl-content {
+      padding-top: 100px;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-bottom: 20px;
+  }
+  .banner > h1 {
+      margin-bottom: 0px;
+      font-size: 16px;
+      line-height: 26px;
+  }
+  .banner > a {
+      font-size: 15px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-right: 20px;
+      padding-left: 20px;
+  }
 }

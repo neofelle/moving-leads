@@ -37,8 +37,8 @@
     ?>	
 
 	<li class="nav-item contact-menu">
-		<i style="margin-left:10px;margin-top: 15px;margin-right: 10px;font-size: 17px;color:#e9982e;" class="fa fa-phone left contact-icon" aria-hidden="true"></i>
-		<a style="color:black;" class="contact" href="tel:+<?php echo str_replace("-", "", $header_number); ?>" style="font-size: 16px;color:white;"><?php echo $header_number; ?></a>
+		<i style="margin-left:10px;margin-top: 15px;margin-right: 10px;font-size: 17px;color:#006cba;" class="fa fa-phone left contact-icon" aria-hidden="true"></i>
+		<a style="color:#006cba;" class="contact" href="tel:+<?php echo str_replace("-", "", $header_number); ?>" style="font-size: 16px;color:#006cba;"><?php echo $header_number; ?></a>
 	</li>
 
 	<?php 
@@ -128,8 +128,8 @@
 				            $header_number = $cf_header_number;
 				        }
 				    ?>
-				    <p class="right" style="font-size: 22px;color: black;font-weight: bold;margin-top: 6px;"><a style="color:black;" class="contact" href="tel:+<?php echo str_replace("-", "", $header_number); ?>" style="font-size: 16px;color:black;"><?php echo $header_number; ?></a></p>
-					<i style="margin-top: 8px;margin-right: 10px;font-size: 21px;color:#e9982e;" class="fa fa-phone right contact-icon" aria-hidden="true"></i>
+				    <p class="right" style="font-size: 22px;color:#006cba;font-weight: bold;margin-top: 6px;"><a style="color:#006cba;" class="contact" href="tel:+<?php echo str_replace("-", "", $header_number); ?>" style="font-size: 16px;color:#006cba;"><?php echo $header_number; ?></a></p>
+					<i style="margin-top: 8px;margin-right: 10px;font-size: 21px;color:#006cba;" class="fa fa-phone right contact-icon" aria-hidden="true"></i>
 				</div>
 			</div>
 		</div>

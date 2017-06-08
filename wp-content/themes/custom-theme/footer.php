@@ -1,4 +1,4 @@
-<section class="footer clear" style="background-color:#d0262b;">
+<section class="footer clear footer-a" style="background-color:#d0262b;">
     <div class="container footer-container">
         <div class="col-md-4 footer-content left">
             <h4 class="bold uppercase title">Quick Links</h4>
@@ -15,7 +15,31 @@
             <?php } ?> 
 
         </div>
-      
+        <div class="col-md-4 footer-content left">
+            <h4 class="bold uppercase title">services</h4>
+            <?php                   
+                $header_number    = $GLOBALS['cgv']['default-contact-number'];
+                $cf_header_number = get_post_meta($post->ID, 'header_contact_number', true);                    
+                if( $cf_header_number != "" ){
+                    $header_number = $cf_header_number;
+                }
+            ?>
+            <p>PHONE : <?php echo $header_number; ?></p>
+            <p>EMAIL : enquiries@OnlineMoving.com</p>
+            <br class="clear">
+            <div class="col-md-12 social-media no-space">
+              <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-2') ) : ?>
+              <?php endif; ?>
+            </div>
+        </div>
+        <div class="col-md-4 footer-content left" style="border-right: none !important;">
+            <h4 class="bold uppercase title">SEND US A MESSAGE</h4>
+             <div class="form no-space" style="position: relative;">
+                <div class="col-md-12 no-space">
+                    <?php echo do_shortcode( '[contact-form-7 id="38" title="Contact form 1"]' ); ?>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section style="background-color: #ffffff;">
@@ -39,9 +63,7 @@
       autoplay: true,
       margin: 10,
       dots: true,
-      autoHeight: false,
-      nav: true,
-      navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"]
+      autoHeight: false
     });
 
     if ($(window).width() >= 1000) {
