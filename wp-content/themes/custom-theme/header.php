@@ -79,28 +79,7 @@
 		<div class="col-md-12 no-space" style="background-color: rgba(162, 50, 81, 0.7);">
 			<div class="container-fullscreen">
 				<nav id="menu" role="navigation">
-					<?php 
-						$v = 0;
-						$menuargs = array(
-							"theme_location" => "primary",
-							"menu_class" => "s-menu",
-							"menu_id" => "main-menu",
-						);
-						$items = wp_get_nav_menu_items( 'main-menu', $menuargs); 
-					?> 
-					<ul class="menu-header" style="">
-						<?php foreach( $items as $item ){ ?>
-								<li><a href="<?php echo $item->url; ?>" class="uppercase right"><?php echo $item->title; ?></a></li>
-						
-						<?php } ?>	
-						<?php                   
-					        $header_number    = $GLOBALS['cgv']['default-contact-number'];
-					        $cf_header_number = get_post_meta($post->ID, 'header_contact_number', true);                    
-					        if( $cf_header_number != "" ){
-					            $header_number = $cf_header_number;
-					        }
-					    ?>
-					</ul>
+					<?php echo wp_nav_menu(array('menu_class' => 'menu-header')); ?>
 				</nav>	
 			</div>
 		</div>

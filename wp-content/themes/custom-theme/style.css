@@ -208,11 +208,14 @@ body {
     float: none;
     font-weight: 600;
     width: 100%;
+    text-transform: uppercase;
 }
 .menu-header > li > a:hover {
     color: #0dafff !important;
 }
-
+.current_page_item > a{
+  color:#0dafff !important;
+}
 /* =============================================================================
    Mobile Nav
    ========================================================================== */
